@@ -2,8 +2,9 @@
 
 int main() {
    
-   Pilha *pilha1 = pilha_cria();
-   
+  
+   Pilha* pilha1 = pilha_cria();
+
     // Insere elementos na lista
      pilha_push(pilha1, 2.1);
     pilha_push(pilha1, 2.2);

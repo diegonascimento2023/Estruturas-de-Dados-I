@@ -11,9 +11,8 @@ Neste arquivo, temos a implementação de uma lista encadeada simples de inteiro
 
 
 struct pilha{
-
-    Lista* prox;
-}
+    Lista* prim;
+};
 
 // função que cria uma lista vazia (NULL)
 Pilha *pilha_cria(void)
@@ -24,12 +23,12 @@ Pilha *pilha_cria(void)
 }
 
 // função que insere um elemento no início da pilha
-void pilha_push(Pilha* p, float v)
+void pilha_push(Pilha* p, int v)
 {
 	Lista* n= (Lista*) malloc(sizeof(Lista));
-	novo->info = v;
-	novo->prox = p->prim;
-	 p->prim = n;.
+	n->info = v;
+	n->prox = p->prim;
+	p->prim = n;
 }
 
 // função que verifica se a pilha está vazia
@@ -39,12 +38,12 @@ int pilha_vazia(Pilha* p)//Recebe como parâmetro o endereço da pilha a ser ver
 }
 
 // função que remove um elemento no início da pilha
-float pilha_pop(Pilha* p){
+int pilha_pop(Pilha* p){
     Lista* t;
-    float v;
+    int v;
     if ( pilha_vazia(p)){
         printf("Pilha vazia.\n");
-        exit 1;
+        exit (1);
     }
     t = p->prim;
     v = t->info;
@@ -53,13 +52,10 @@ float pilha_pop(Pilha* p){
     return v;
 }
 
-
-
-
 // função que imprime pilha
 void pilha_imprime(Pilha* p)
 {
-	list_imprime(p->prim);
+	lst_imprime(p->prim);
 }
 
 
